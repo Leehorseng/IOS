@@ -1,3 +1,7 @@
 import UIKit
 
-var greeting = "Hello, playground"
+let myInt = 42
+
+let descriptiveSentence = "The number is \(myInt)"
+
+print(descriptiveSentence)

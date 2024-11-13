@@ -1,3 +1,3 @@
 import UIKit
-
-var greeting = "Hello, playground"
+var favoriteMovie = "Inception"
+print("My Favourite Movie is \(favoriteMovie)")
