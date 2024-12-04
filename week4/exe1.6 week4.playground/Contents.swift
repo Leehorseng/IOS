@@ -1,20 +1,19 @@
 import UIKit
 
-
-let number = [1, 2, 3, 4]
-
-for i in number {
-    for j in 1...i {
-        print("*", terminator: "")
+func Diamond(maxStars: Int) {
+    for i in 1...maxStars {
+        for _ in 1...i {
+            print("*", terminator: "")
+        }
+        print()
     }
-    print("")
+    
+    for i in stride(from: maxStars - 1, through: 1, by: -1) {
+        for _ in 1...i {
+            print("*", terminator: "")
+        }
+        print()
+    }
 }
 
-var n = 3
-for i in 1...3 {
-    for j in 1...n {
-        print("*", terminator: "")
-    }
-    print("")
-    n -= 1
-}
+Diamond(maxStars: 4)

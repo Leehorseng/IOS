@@ -1,3 +1,7 @@
 import UIKit
+func greet(name: String) {
+    print("Hello, \(name)!")
+}
 
-var greeting = "Hello, playground"
+greet(name: "Alice")
+greet(name: "Bob")

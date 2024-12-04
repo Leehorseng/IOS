@@ -1,17 +1,12 @@
 import UIKit
 
-
-let numbers = [34, 7, 23, 32, 5, 62, 12]
-
-if numbers.isEmpty {
-    print("The array is empty.")
-} else {
+func Max(from array: [Int]) -> (smallest: Int, largest: Int)? {
+    guard !array.isEmpty else { return nil }
     
-    var smallest = numbers[0]
-    var largest = numbers[0]
+    var smallest = array[0]
+    var largest = array[0]
     
-    
-    for number in numbers {
+    for number in array {
         if number < smallest {
             smallest = number
         }
@@ -19,8 +14,13 @@ if numbers.isEmpty {
             largest = number
         }
     }
-    
-    
-    print("Smallest number: \(smallest)")
-    print("Largest number: \(largest)")
+   
+    return (smallest, largest)
 }
+
+if let result = Max(from: [34, 7, 23, 32, 5, 62]) {
+    print("Smallest: \(result.smallest), Largest: \(result.largest)")
+} else {
+    print("The array is empty.")
+}
+
